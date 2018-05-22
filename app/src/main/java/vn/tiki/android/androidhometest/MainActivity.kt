@@ -13,18 +13,15 @@ class MainActivity : AppCompatActivity() {
 
   val apiServices by inject<ApiServices>()
 
-  private var task: AsyncTask<Unit, Unit, List<Deal>>? = null
-
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     initDependencies(this)
+
     setContentView(R.layout.activity_main)
 
-    val deals = apiServices.getDeals()
-
-    task = object : AsyncTask<Unit, Unit, List<Deal>>() {
+    object : AsyncTask<Unit, Unit, List<Deal>>() {
       override fun doInBackground(vararg params: Unit?): List<Deal> {
-        return deals
+        return apiServices.getDeals()
       }
 
       override fun onPostExecute(result: List<Deal>?) {
@@ -40,6 +37,5 @@ class MainActivity : AppCompatActivity() {
   override fun onDestroy() {
     super.onDestroy()
     releaseDependencies()
-    task?.cancel(true)
   }
 }
