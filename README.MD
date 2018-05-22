@@ -4,4 +4,4 @@ On the individual grid item, you should show the product's picture, name, price 
 
 The countdown is updated on every seconds. When a countdown is finished, the item that contains the countdown must be hidden and removed from the grid.
 
-We created the `starter` repository, it contains sample code and the `ApiService` class to help you to get deals. You can either download the sample code to your computer as [Download](https://github.com/tikivn/android-home-test/archive/master.zip) or clone the GitHub repository from the command line as `https://github.com/tikivn/android-home-test`.
+We created the `starter` repository, it contains sample code and the `ApiService` class to help you to get deals. You can find the GitHub repository as `https://github.com/tikivn/android-home-test`.
