@@ -8,7 +8,7 @@ Requirement:
 
  * [ ] If the keyword is more than one word, then display in two lines.
  * [ ] Background color is random.
- * [ ] Keywords must be fetched from the [link](https://github.com/tikivn/android-home-test/blob/v2/README.md).
+ * [ ] Keywords must be fetched from the [link](https://raw.githubusercontent.com/tikivn/android-home-test/v2/keywords.json).
 
 If you have any questions please send email to giang.nguyen@tiki.vn for answers.
 
