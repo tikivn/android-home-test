@@ -1,17 +1,31 @@
 # Home Test
 
-Create a simple Android project. Code to display the following keyword list as designed:
+Create a simple Android project to display following UI:
 
- ![](./demo.gif)
+ ![](./sample.gif)
 
-Requirement:
+## Requirements
 
- * [ ] If the keyword is more than one word, then display in two lines. These two lines should have minimum difference in length. For example: "nguyễn nhật ánh" should be "nguyễn\nnhật ánh", not "nguyễn nhật\nánh". Because difference in length of "nguyễn" and "nhật ánh" is less than difference in length of "nguyễn nhật" and "ánh".
- * [ ] Keywords must be fetched from the [link](https://raw.githubusercontent.com/tikivn/android-home-test/v2/keywords.json).
+### API calls
+Banner API:  
+```curl https://api.tiki.vn/v2/home/banners/v2```
+Quick link API:
+```curl https://api.tiki.vn/shopping/v2/widgets/quick_link```
+Flash Deal API: 
+```curl https://api.tiki.vn/v2/widget/deals/hot```
 
-If you have any questions please send email to giang.nguyen@tiki.vn for answers.
+Call Banner API + Quick Link API at the same time, after both of them finish call Flash Deal API
 
-PS: 
+### UI
+- Render UI in sequential from top to bottom: Banner -> Quick Link -> Flash Deal
+- If the API for that block failed, skip the block.
+Ex: Banner ok, Quick Link failed, Flash Deal ok => render: Banner -> Flash Deal
+- Display loading
 
- * [ ] Upload your submission to Github then send me the link.
- * [ ] Requirements are very simple. But don't do it sketchily. Pay attention on performance, algorithms. Testing, if any, will be a plus.
+### Good to have
+- You can use any framework library in the project (RxJava, Coroutine, LiveData ...). Handle all concurrency in application by just callbacks is a plus.
+- Good architecture, easy to read code is a plus.
+- You don't need to create the exact UI, just need to focus on API load and render 3 above widget, doing everything is a plus too.
+
+### Submit
+- Please upload the project to github and send the project link + your CV to kiet.nguyen@tiki.vn for evaluation.
