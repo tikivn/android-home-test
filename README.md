@@ -7,18 +7,24 @@ Create a simple Android project to display following UI:
 ## Requirements
 
 ### API calls
-Banner API:  
-```curl https://api.tiki.vn/v2/home/banners/v2```
-Quick link API:
-```curl https://api.tiki.vn/shopping/v2/widgets/quick_link```
-Flash Deal API: 
-```curl https://api.tiki.vn/v2/widget/deals/hot```
+- Banner API:  
+```
+curl https://api.tiki.vn/v2/home/banners/v2
+```
+- Quick link API:  
+```
+curl https://api.tiki.vn/shopping/v2/widgets/quick_link
+```
+- Flash Deal API:  
+```
+curl https://api.tiki.vn/v2/widget/deals/hot
+```
 
-Call Banner API + Quick Link API at the same time, after both of them finish call Flash Deal API
+Call `Banner API` + `Quick Link API` at the same time, after both of them finish call `Flash Deal API`
 
 ### UI
 - Render UI in sequential from top to bottom: Banner -> Quick Link -> Flash Deal
-- If the API for that block failed, skip the block.
+- If the API for that block failed, skip the block.  
 Ex: Banner ok, Quick Link failed, Flash Deal ok => render: Banner -> Flash Deal
 - Display loading
 
