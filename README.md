@@ -26,7 +26,8 @@ Call `Banner API` + `Quick Link API` in parallel , after both of them finish cal
 - Render UI in sequential from top to bottom: Banner -> Quick Link -> Flash Deal
 - If the API for that block failed, skip the block.  
 Ex: Banner ok, Quick Link failed, Flash Deal ok => render: Banner -> Flash Deal
-- Display loading
+- Display loading  
+- Pull to refresh
 
 ### Good to have
 - You can use any framework library in the project (RxJava, Coroutine, LiveData ...). Handle all concurrency in application by just callbacks is a plus.
