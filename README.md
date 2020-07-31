@@ -20,7 +20,7 @@ curl https://api.tiki.vn/shopping/v2/widgets/quick_link
 curl https://api.tiki.vn/v2/widget/deals/hot
 ```
 
-Call `Banner API` + `Quick Link API` at the same time, after both of them finish call `Flash Deal API`
+Call `Banner API` + `Quick Link API` in parallel , after both of them finish call `Flash Deal API`
 
 ### UI
 - Render UI in sequential from top to bottom: Banner -> Quick Link -> Flash Deal
